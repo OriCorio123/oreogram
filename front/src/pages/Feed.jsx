@@ -12,7 +12,6 @@ useEffect(()=>{
 
     return (
       <>
-          {/* --- NEW TOP NAV BAR --- */}
           <nav className="top-nav">
               <img src="/logo.png" alt="Oreogram Logo" className="oreogram-logo-img" />
           </nav>
@@ -20,7 +19,6 @@ useEffect(()=>{
           <section className='feed-section'>
               {posts.length > 0 ? (
                   posts.map((post) => {
-                      // Formats the date to look like "JUN 16, 2026"
                       const formattedDate = new Date(post.created).toLocaleDateString('en-US', {
                           month: 'short', 
                           day: 'numeric',
