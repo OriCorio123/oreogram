@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body #root{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  color: #262626;
+}
+/* Main container mimicking the app screen */
+.create-post-section {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  min-height: 100vh;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #262626;
+}
+
+/* Mimicking the Instagram top navigation bar */
+.create-post-section h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 0;
+  margin: 0;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: #ffffff;
+}
+
+/* Form Layout */
+.create-post-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling the file input to look like a square image placeholder */
+.create-post-section input[type="file"] {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Makes the upload area a perfect square */
+  background-color: #fafafa;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  padding: 20px;
+  color: #262626;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Styling the default "Choose File" button inside the input */
+.create-post-section input[type="file"]::file-selector-button {
+  border: none;
+  background-color: transparent;
+  color: #0095f6; /* Instagram Blue */
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 0;
+}
+
+/* Styling the caption input to look like a clean text area */
+.create-post-section input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 15px;
+  font-size: 0.95rem;
+  outline: none;
+  color: #262626;
+  background-color: #ffffff;
+}
+
+/* Styling the placeholder text */
+.create-post-section input[type="text"]::placeholder {
+  color: #8e8e8e;
+}
+/* Styling the new Upload button */
+.create-post-section button[type="submit"] {
+  background-color: #0095f6; /* Classic Instagram Blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 15px; /* Keeps it spaced from the edges */
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover/Active states for better UX */
+.create-post-section button[type="submit"]:hover {
+  background-color: #1877f2;
+}
+
+.create-post-section button[type="submit"]:active {
+  background-color: #0095f6;
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+/* Centers the feed and gives it a clean background */
+.feed-section {
+    max-width: 470px;
+    margin: 0 auto;
+    background-color: #fafafa;
+    min-height: 100vh;
+    padding-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* The Post Container */
+.ig-post-card {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Forces the image to be a perfect square */
+.ig-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #efefef;
+}
+
+/* Padding around the text area */
+.ig-details {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Typography styling matching IG */
+.ig-likes {
+    font-size: 0.95rem;
+    color: #262626;
+}
+
+.ig-caption {
+    font-size: 0.95rem;
+    color: #262626;
+    line-height: 1.4;
+}
+
+.ig-date {
+    font-size: 0.75rem;
+    color: #8e8e8e;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+}
+
+.no-posts {
+    text-align: center;
+    color: #8e8e8e;
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+/* Keeps the icons perfectly spaced */
+.ig-action-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 6px;
+    align-items: center;
+}
+
+/* Styles your new PNG files */
+.action-icon-img {
+    width: 24px;  /* Standard Instagram icon width */
+    height: 24px; /* Standard Instagram icon height */
+    object-fit: contain; /* Ensures the images don't stretch weirdly */
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+/* Gives them that tappable app feel */
+.action-icon-img:active {
+    transform: scale(0.85);
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+/* --- Top Navigation Bar --- */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+    position: sticky; /* Keeps it at the top when scrolling */
+    top: 0;
+    z-index: 100; /* Ensures it stays above the scrolling posts */
+}
+
+/* --- Style for the new PNG Logo --- */
+.oreogram-logo-img {
+    height: 200px; /* Keeps the logo cleanly inside the 60px nav bar */
+    width: auto;  /* Maintains the original aspect ratio */
+    object-fit: contain;
+    cursor: pointer;
+}
