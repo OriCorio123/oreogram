@@ -4,7 +4,7 @@ const Feed = () => {
     const [posts,setPosts] = useState([])
 
 useEffect(()=>{
-    axios.get("http://localhost:8080/posts")
+    axios.get("https://oreogram.onrender.com/posts")
     .then((res)=>{
         setPosts(res.data.posts)
     })

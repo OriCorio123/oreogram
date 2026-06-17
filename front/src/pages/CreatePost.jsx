@@ -6,7 +6,7 @@ const CreatePost = () => {
     const handleSubmit = async (e)=>{
         e.preventDefault()
         const formData = new FormData(e.target)
-        axios.post("http://localhost:8080/upload",formData)
+        axios.post("https://oreogram.onrender.com/upload",formData)
         .then((res)=>{
             navigate("/");
         })
